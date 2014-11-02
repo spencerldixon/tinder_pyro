@@ -9,7 +9,7 @@ Installation
 
 Add this line to your application's `Gemfile`:
 
-    gem 'tinder_pyro', '~> 0.0.1'
+    gem 'tinder_pyro', '~> 0.0.1', require: 'pyro'
 
 And then execute:
 
