@@ -23,21 +23,9 @@ Alternatively, install it via command line:
 Getting Your oauth Token
 ------------------------
 
-Before using pyro, you must grab your Facebook oauth token. This is best done by
-installing (Charles)[http://www.charlesproxy.com/]. This will allow you to view
-all HTTP requests from your phone to the network. Note that Tinder uses SSL so
-you must set up SSL proxying.
+Before using pyro, you must grab your Facebook oauth token. Easiest way is to follow this <a href="https://www.facebook.com/dialog/oauth?client_id=464891386855067&redirect_uri=https://www.facebook.com/connect/login_success.html&scope=basic_info,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_photos,user_relationship_details&response_type=token">link</a> and read facebook token from url you get redirected to. 
 
-After setting up your proxy, all you need to do in log out and then back in to
-the Tinder app. Make sure you are recording with Charles, and it will give you a
-request to `https://api.gotinder.com/auth` that looks like:
-
-    {
-      "facebook_token":"CAAGm0PX4ZCp...",
-      "facebook_id": "547255555"
-    }
-
-Now use your Facebook ID and token as shown below.
+To find your facebook id simply paste into address bar: `http://graph.facebook.com/your_fb_username` and read it from json response.
 
 
 Usage
