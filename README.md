@@ -1,7 +1,8 @@
 Tinder Pyro
 ===========
 
-A wrapper for the Tinder App API.
+A wrapper for the Tinder App API from github.com/nneal
+Forked for a few minor updates for Tinderfish.
 
 
 Installation
@@ -59,7 +60,7 @@ pyro.like(user_id)
 pyro.dislike(user_id)
 
 # Send a saucy message
-pyro.send_message(user_id, 'I luv u plz b my friend')
+pyro.send_message(match_id, 'I luv u plz b my friend')
 ```
 
 **Interacting with yourself**
@@ -73,7 +74,12 @@ longitude = 3.0094
 pyro.update_location(latitude, longitude)
 
 # Fetch updates (messages, likes, etc)
-pyro.fetch_updates
+pyro.fetch_updates(pass in a time here)
+
+or
+
+pyro.fetch_all_updates
+# to get all updates regardless of time
 ```
 
 

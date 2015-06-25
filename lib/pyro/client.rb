@@ -8,10 +8,17 @@ module TinderPyro
       @requestor.get_request("pass/#{user_id}")
     end
 
-    def fetch_updates(last_activity_time = Time.now)
+    def fetch_updates(last_activity_time = Time.now.utc.iso8601(3))
       @requestor.post_request(
         :updates,
-        last_activity_date: Utilities.format_time(last_activity_time)
+        last_activity_date: last_activity_time
+      )
+    end
+
+    def fetch_all_updates
+      @requestor.post_request(
+        :updates,
+        last_activity_date: ""
       )
     end
 
